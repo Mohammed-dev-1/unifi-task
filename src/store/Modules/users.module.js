@@ -22,9 +22,8 @@ export const users = {
     }
   },
   actions: {
-    login({commit}, data, message) {
+    login({commit}, data) {
       commit('SET_USER', data);
-      commit('tools/SET_MESSAGE', message, {root:true});
     }
   }
 }

@@ -61,12 +61,12 @@ export default {
         body: this.description,
         recipe_image: this.recipeImage
       }
-      const message = {
-        type: 'SUCCESS',
-        message: 'Recipe was created successfuly'
-      }
+      // const message = {
+      //   type: 'SUCCESS',
+      //   message: 'Recipe was created successfuly'
+      // }
       console.log(form)
-      this.$store.dispatch('recipes/createRecipe', form, message)
+      this.$store.dispatch('recipes/createRecipe', form)
         .then(()=> {
           this.$router.push({
             name: 'Home',

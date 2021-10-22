@@ -33,13 +33,11 @@ export const recipes = {
     // }
   },
   actions: {
-    createRecipe({commit}, data, message) {
+    createRecipe({commit}, data) {
       commit('SET_NEW_RECIPE', data);
-      commit('tools/SET_MESSAGE', message, {root:true})
     },
-    deleteRecipe({commit}, id, message) {
+    deleteRecipe({commit}, id) {
       commit('DELETE_RECIPE', id);
-      commit('tools/SET_MESSAGE', message, {root:true})
     },
     updateRecipe({commit}, data, id) {
       commit('UPDATE_RECIPE', data, id);
